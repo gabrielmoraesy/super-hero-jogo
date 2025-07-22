@@ -184,8 +184,8 @@ const RoboDialogScreens = ({ onFinish }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen overflow-hidden relative"
-      style={{ background: '#0D0D0D' }}
+      className="overflow-hidden relative"
+      style={{ background: '#0D0D0D', minHeight: '100dvh', height: '100dvh' }}
     >
       <img 
         src={backgroundAppImg}
@@ -451,8 +451,8 @@ const LocationSelector = ({ onLocationSelect, completedLocations = [], userProgr
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen overflow-hidden"
-      style={{ background: '#0D0D0D' }}
+      className="overflow-hidden"
+      style={{ background: '#0D0D0D', minHeight: '100dvh', height: '100dvh' }}
     >
       <div className="h-full max-w-[475px] mx-auto flex flex-col p-4 rounded-xl shadow-xl"
         style={{ background: '#181818', color: '#FFFFFF', border: '1px solid #242424' }}
@@ -658,8 +658,8 @@ const QuizQuestion = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen overflow-hidden"
-      style={{ background: '#0D0D0D' }}
+      className="overflow-hidden"
+      style={{ background: '#0D0D0D', minHeight: '100dvh', height: '100dvh' }}
     >
       <div className="h-full max-w-[475px] mx-auto flex flex-col p-4">
         {/* Header com progresso e stats */}
@@ -1213,8 +1213,8 @@ function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="h-screen overflow-hidden relative"
-              style={{ background: '#0D0D0D' }}
+              className="overflow-hidden relative"
+              style={{ background: '#0D0D0D', minHeight: '100dvh', height: '100dvh' }}
             >
               <img 
                 src={backgroundAppImg}
