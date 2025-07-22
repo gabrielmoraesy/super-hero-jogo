@@ -15,7 +15,7 @@ import {
   User,
   X
 } from 'lucide-react';
-import cityMapImg from './assets/city.png';
+import cityMapImg from '@/assets/city.png'; 
 
 // Mapeamento de ícones para localidades
 const locationIcons = {
