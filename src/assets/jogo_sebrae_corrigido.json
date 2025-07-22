@@ -1,0 +1,2336 @@
+{
+  "meta": {
+    "titulo": "Jogo Sebrae - Reconstrução da Cidade",
+    "descricao": "Jogo educativo sobre desenvolvimento de habilidades empreendedoras e técnicas através de situações práticas de reconstrução urbana",
+    "versao": "1.1",
+    "data_extracao": "2025-01-21 (corrigido)",
+    "fonte": "Detalhamentojogo_EntregafinalSebrae.xlsx",
+    "total_elementos": {
+      "localidades": 6,
+      "perguntas": 50,
+      "superpoderes": 8,
+      "vinculacoes": 50
+    },
+    "correcoes": {
+      "data_correcao": "2025-01-21",
+      "tipo_correcao": "atribuicao_localidades",
+      "perguntas_corrigidas": 50,
+      "distribuicao_final": {
+        "escola": 11,
+        "area_rural": 26,
+        "hospital": 6,
+        "universidade": 2,
+        "casa": 2,
+        "policia": 3
+      }
+    }
+  },
+  "localidades": [
+    {
+      "id": "escola",
+      "nome": "Escola",
+      "descricao": "Centro educacional da cidade, local para desenvolvimento de conhecimentos e habilidades",
+      "categoria": "educacao",
+      "cor_tema": "#4CAF50",
+      "icone": "school",
+      "ativa": true,
+      "problemas_associados": [],
+      "itens_disponiveis": [
+        "livro",
+        "caderno",
+        "materiais_escolares",
+        "quadro",
+        "carteira"
+      ]
+    },
+    {
+      "id": "hospital",
+      "nome": "Hospital",
+      "descricao": "Centro de saúde para atendimento médico e cuidados de emergência",
+      "categoria": "saude",
+      "cor_tema": "#F44336",
+      "icone": "local_hospital",
+      "ativa": true,
+      "problemas_associados": [],
+      "itens_disponiveis": [
+        "ressonancia_magnetica",
+        "manual_equipamentos",
+        "medicamentos"
+      ]
+    },
+    {
+      "id": "casa",
+      "nome": "Casa",
+      "descricao": "Residência do jogador, base de operações pessoais",
+      "categoria": "residencial",
+      "cor_tema": "#FF9800",
+      "icone": "home",
+      "ativa": true,
+      "problemas_associados": [],
+      "itens_disponiveis": [
+        "maquina_lavar",
+        "gerador",
+        "scanner",
+        "ferramentas"
+      ]
+    },
+    {
+      "id": "universidade",
+      "nome": "Universidade",
+      "descricao": "Instituição de ensino superior e pesquisa científica",
+      "categoria": "educacao",
+      "cor_tema": "#9C27B0",
+      "icone": "school",
+      "ativa": true,
+      "problemas_associados": [],
+      "itens_disponiveis": [
+        "laboratorio",
+        "biblioteca",
+        "equipamentos_pesquisa"
+      ]
+    },
+    {
+      "id": "policia",
+      "nome": "Delegacia de Polícia",
+      "descricao": "Posto de segurança pública e ordem urbana",
+      "categoria": "seguranca",
+      "cor_tema": "#2196F3",
+      "icone": "local_police",
+      "ativa": true,
+      "problemas_associados": [],
+      "itens_disponiveis": [
+        "gerador",
+        "equipamentos_seguranca"
+      ]
+    },
+    {
+      "id": "area_rural",
+      "nome": "Área Rural",
+      "descricao": "Zona rural com fazendas, agricultura e pecuária",
+      "categoria": "rural",
+      "cor_tema": "#8BC34A",
+      "icone": "agriculture",
+      "ativa": true,
+      "problemas_associados": [],
+      "itens_disponiveis": [
+        "trator",
+        "ferramentas_agricolas",
+        "animais",
+        "plantacao"
+      ]
+    }
+  ],
+  "habilidades": {
+    "categorias": {
+      "laranja": {
+        "nome": "Habilidades de Liderança",
+        "cor": "#FF9800",
+        "icone": "crown",
+        "descricao": "Habilidades relacionadas à liderança, gestão e tomada de decisão",
+        "habilidades": [
+          {
+            "id": "lideranca_comunicacao",
+            "nome": "Comunicação Eficaz",
+            "descricao": "Capacidade de se comunicar claramente e inspirar outros",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              100,
+              250,
+              500,
+              1000,
+              2000
+            ]
+          },
+          {
+            "id": "lideranca_decisao",
+            "nome": "Tomada de Decisão",
+            "descricao": "Habilidade para tomar decisões rápidas e assertivas",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              150,
+              300,
+              600,
+              1200,
+              2400
+            ]
+          },
+          {
+            "id": "lideranca_gestao",
+            "nome": "Gestão de Equipes",
+            "descricao": "Capacidade de liderar e motivar equipes",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              200,
+              400,
+              800,
+              1600,
+              3200
+            ]
+          }
+        ]
+      },
+      "amarelo": {
+        "nome": "Habilidades Criativas",
+        "cor": "#FFC107",
+        "icone": "lightbulb",
+        "descricao": "Habilidades relacionadas à criatividade, inovação e resolução de problemas",
+        "habilidades": [
+          {
+            "id": "criativo_inovacao",
+            "nome": "Inovação",
+            "descricao": "Capacidade de criar soluções inovadoras",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              120,
+              280,
+              560,
+              1120,
+              2240
+            ]
+          },
+          {
+            "id": "criativo_resolucao",
+            "nome": "Resolução Criativa",
+            "descricao": "Habilidade para resolver problemas de forma criativa",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              100,
+              250,
+              500,
+              1000,
+              2000
+            ]
+          },
+          {
+            "id": "criativo_adaptacao",
+            "nome": "Adaptabilidade",
+            "descricao": "Capacidade de se adaptar rapidamente a mudanças",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              80,
+              200,
+              400,
+              800,
+              1600
+            ]
+          }
+        ]
+      },
+      "rosa": {
+        "nome": "Habilidades Sociais",
+        "cor": "#E91E63",
+        "icone": "heart",
+        "descricao": "Habilidades relacionadas à empatia, colaboração e relacionamento interpessoal",
+        "habilidades": [
+          {
+            "id": "social_empatia",
+            "nome": "Empatia",
+            "descricao": "Capacidade de compreender e se conectar com outros",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              90,
+              220,
+              440,
+              880,
+              1760
+            ]
+          },
+          {
+            "id": "social_colaboracao",
+            "nome": "Colaboração",
+            "descricao": "Habilidade para trabalhar efetivamente em equipe",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              110,
+              270,
+              540,
+              1080,
+              2160
+            ]
+          },
+          {
+            "id": "social_persuasao",
+            "nome": "Persuasão",
+            "descricao": "Capacidade de influenciar e convencer outros",
+            "nivel_maximo": 5,
+            "xp_necessario": [
+              130,
+              320,
+              640,
+              1280,
+              2560
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "superpoderes": [
+    {
+      "id": "super_empatia",
+      "nome": "Superpoder da Empatia",
+      "descricao": "Capacidade extraordinária de compreender e se conectar emocionalmente com qualquer pessoa",
+      "categoria": "rosa",
+      "requisitos": {
+        "habilidade_principal": "social_empatia",
+        "nivel_minimo": 3,
+        "xp_total_minimo": 500
+      },
+      "efeitos": [
+        "Respostas relacionadas à empatia valem 50% mais XP",
+        "Desbloqueio de perguntas especiais de relacionamento",
+        "Bônus na evolução do personagem"
+      ]
+    },
+    {
+      "id": "super_lideranca",
+      "nome": "Superpoder da Liderança",
+      "descricao": "Habilidade excepcional para inspirar e liderar grandes grupos",
+      "categoria": "laranja",
+      "requisitos": {
+        "habilidade_principal": "lideranca_comunicacao",
+        "nivel_minimo": 4,
+        "xp_total_minimo": 800
+      },
+      "efeitos": [
+        "Respostas de liderança valem 75% mais XP",
+        "Acesso a desafios de gestão avançados",
+        "Multiplicador de XP para equipe"
+      ]
+    },
+    {
+      "id": "super_inovacao",
+      "nome": "Superpoder da Inovação",
+      "descricao": "Capacidade de criar soluções revolucionárias para qualquer problema",
+      "categoria": "amarelo",
+      "requisitos": {
+        "habilidade_principal": "criativo_inovacao",
+        "nivel_minimo": 3,
+        "xp_total_minimo": 600
+      },
+      "efeitos": [
+        "Respostas criativas valem 60% mais XP",
+        "Desbloqueio de projetos especiais",
+        "Bônus em todas as categorias de habilidades"
+      ]
+    },
+    {
+      "id": "super_resolucao",
+      "nome": "Superpoder da Resolução",
+      "descricao": "Habilidade para resolver qualquer problema de forma rápida e eficiente",
+      "categoria": "amarelo",
+      "requisitos": {
+        "habilidade_principal": "criativo_resolucao",
+        "nivel_minimo": 4,
+        "xp_total_minimo": 700
+      },
+      "efeitos": [
+        "Tempo extra em perguntas difíceis",
+        "Dicas automáticas em problemas complexos",
+        "XP dobrado em resolução de problemas"
+      ]
+    },
+    {
+      "id": "super_persuasao",
+      "nome": "Superpoder da Persuasão",
+      "descricao": "Capacidade de convencer e influenciar qualquer pessoa",
+      "categoria": "rosa",
+      "requisitos": {
+        "habilidade_principal": "social_persuasao",
+        "nivel_minimo": 3,
+        "xp_total_minimo": 550
+      },
+      "efeitos": [
+        "Respostas sociais valem 55% mais XP",
+        "Acesso a negociações especiais",
+        "Bônus em interações com NPCs"
+      ]
+    },
+    {
+      "id": "super_gestao",
+      "nome": "Superpoder da Gestão",
+      "descricao": "Habilidade excepcional para gerenciar recursos e pessoas",
+      "categoria": "laranja",
+      "requisitos": {
+        "habilidade_principal": "lideranca_gestao",
+        "nivel_minimo": 4,
+        "xp_total_minimo": 900
+      },
+      "efeitos": [
+        "Gestão de múltiplas localidades simultaneamente",
+        "Bônus de eficiência em todas as ações",
+        "XP adicional por gestão bem-sucedida"
+      ]
+    },
+    {
+      "id": "super_adaptacao",
+      "nome": "Superpoder da Adaptação",
+      "descricao": "Capacidade de se adaptar instantaneamente a qualquer situação",
+      "categoria": "amarelo",
+      "requisitos": {
+        "habilidade_principal": "criativo_adaptacao",
+        "nivel_minimo": 3,
+        "xp_total_minimo": 450
+      },
+      "efeitos": [
+        "Resistência a penalidades de mudança",
+        "Bônus em situações inesperadas",
+        "Recuperação rápida de erros"
+      ]
+    },
+    {
+      "id": "super_colaboracao",
+      "nome": "Superpoder da Colaboração",
+      "descricao": "Habilidade para criar sinergia perfeita em qualquer equipe",
+      "categoria": "rosa",
+      "requisitos": {
+        "habilidade_principal": "social_colaboracao",
+        "nivel_minimo": 4,
+        "xp_total_minimo": 750
+      },
+      "efeitos": [
+        "Bônus de equipe em todas as atividades",
+        "Desbloqueio de projetos colaborativos",
+        "XP compartilhado com outros jogadores"
+      ]
+    }
+  ],
+  "perguntas": [
+    {
+      "id": "pergunta_001",
+      "texto": "Você precisa fazer uma apresentação sobre a geografia local para planejar a reconstrução da cidade. Qual ferramenta seria mais útil para criar uma apresentação visual impactante?",
+      "tipo": "busca_item",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Notebook com software de apresentação",
+          "correta": false,
+          "feedback": "Útil, mas não é a melhor opção para dados geográficos."
+        },
+        {
+          "texto": "Caderno de anotações",
+          "correta": false,
+          "feedback": "Muito básico para uma apresentação visual."
+        },
+        {
+          "texto": "Caixa de materiais escolares com mapas e gráficos",
+          "correta": true,
+          "feedback": "Perfeito! Mapas e gráficos são essenciais para apresentações geográficas."
+        },
+        {
+          "texto": "Livro de geografia",
+          "correta": false,
+          "feedback": "Fonte de informação, mas não ideal para apresentações visuais."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_002",
+      "texto": "Durante a reconstrução, você precisa lidar com conflitos entre diferentes grupos da comunidade escolar. Qual superpoder seria mais útil nesta situação?",
+      "tipo": "resolucao_problema",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Desistir e deixar outros resolverem",
+          "correta": false,
+          "feedback": "Desistir não resolve conflitos e pode piorar a situação."
+        },
+        {
+          "texto": "Superpoder da Empatia",
+          "correta": true,
+          "feedback": "Excelente! A empatia ajuda a entender diferentes perspectivas e mediar conflitos."
+        },
+        {
+          "texto": "Superpoder da Força",
+          "correta": false,
+          "feedback": "Força física não resolve conflitos interpessoais."
+        },
+        {
+          "texto": "Ignorar o problema",
+          "correta": false,
+          "feedback": "Ignorar conflitos pode fazer com que se tornem maiores."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_003",
+      "texto": "A escola precisa de um novo sistema de comunicação para coordenar as atividades de reconstrução. Qual seria a melhor abordagem?",
+      "tipo": "multipla_escolha",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Criar um mural físico na entrada da escola",
+          "correta": false,
+          "feedback": "Limitado e não permite comunicação em tempo real."
+        },
+        {
+          "texto": "Implementar um sistema digital de comunicação",
+          "correta": true,
+          "feedback": "Correto! Sistemas digitais permitem comunicação rápida e eficiente."
+        },
+        {
+          "texto": "Usar apenas comunicação verbal",
+          "correta": false,
+          "feedback": "Ineficiente para grandes grupos e informações complexas."
+        },
+        {
+          "texto": "Não criar nenhum sistema",
+          "correta": false,
+          "feedback": "Sem comunicação, a coordenação se torna impossível."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_004",
+      "texto": "Você descobriu que alguns estudantes têm habilidades especiais que podem ajudar na reconstrução. Como você organizaria essas habilidades?",
+      "tipo": "resolucao_problema",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Criar equipes baseadas nas habilidades de cada um",
+          "correta": true,
+          "feedback": "Excelente! Organizar por habilidades maximiza a eficiência."
+        },
+        {
+          "texto": "Deixar cada um trabalhar sozinho",
+          "correta": false,
+          "feedback": "Trabalho isolado reduz a colaboração e eficiência."
+        },
+        {
+          "texto": "Ignorar as habilidades especiais",
+          "correta": false,
+          "feedback": "Desperdiçar talentos é uma má estratégia de gestão."
+        },
+        {
+          "texto": "Usar apenas habilidades tradicionais",
+          "correta": false,
+          "feedback": "Limitar-se ao tradicional pode perder oportunidades inovadoras."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_005",
+      "texto": "A biblioteca da escola foi danificada. Qual seria a prioridade na sua reconstrução?",
+      "tipo": "multipla_escolha",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Reconstruir apenas a estrutura física",
+          "correta": false,
+          "feedback": "Estrutura sem conteúdo não cumpre a função educacional."
+        },
+        {
+          "texto": "Focar apenas em livros digitais",
+          "correta": false,
+          "feedback": "Apenas digital pode excluir quem não tem acesso à tecnologia."
+        },
+        {
+          "texto": "Criar um espaço híbrido com livros físicos e digitais",
+          "correta": true,
+          "feedback": "Perfeito! Combinar físico e digital atende a todas as necessidades."
+        },
+        {
+          "texto": "Não reconstruir a biblioteca",
+          "correta": false,
+          "feedback": "A biblioteca é essencial para a educação."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_006",
+      "texto": "Você precisa motivar os estudantes a participar da reconstrução da escola. Qual estratégia seria mais eficaz?",
+      "tipo": "resolucao_problema",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Obrigar todos a participar",
+          "correta": false,
+          "feedback": "Obrigação pode gerar resistência e desmotivação."
+        },
+        {
+          "texto": "Criar um sistema de recompensas e reconhecimento",
+          "correta": true,
+          "feedback": "Excelente! Recompensas e reconhecimento motivam participação voluntária."
+        },
+        {
+          "texto": "Fazer tudo sozinho",
+          "correta": false,
+          "feedback": "Trabalhar sozinho impede o desenvolvimento da comunidade."
+        },
+        {
+          "texto": "Esperar que se motivem sozinhos",
+          "correta": false,
+          "feedback": "Liderança passiva raramente gera engajamento."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_007",
+      "texto": "Durante a reconstrução, você encontra materiais educativos danificados. Como você lidaria com essa situação?",
+      "tipo": "busca_item",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Descartar tudo e começar do zero",
+          "correta": false,
+          "feedback": "Desperdiçar recursos recuperáveis não é sustentável."
+        },
+        {
+          "texto": "Tentar restaurar o que for possível",
+          "correta": true,
+          "feedback": "Correto! Restaurar é sustentável e preserva recursos valiosos."
+        },
+        {
+          "texto": "Usar apenas materiais digitais",
+          "correta": false,
+          "feedback": "Nem tudo pode ser substituído digitalmente."
+        },
+        {
+          "texto": "Não usar materiais educativos",
+          "correta": false,
+          "feedback": "Materiais educativos são essenciais para o aprendizado."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_008",
+      "texto": "A escola precisa de um novo laboratório de ciências. Qual seria sua abordagem para o projeto?",
+      "tipo": "multipla_escolha",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Copiar exatamente o laboratório anterior",
+          "correta": false,
+          "feedback": "Copiar não aproveita oportunidades de melhoria."
+        },
+        {
+          "texto": "Projetar um laboratório moderno e sustentável",
+          "correta": true,
+          "feedback": "Perfeito! Modernidade e sustentabilidade são essenciais."
+        },
+        {
+          "texto": "Criar apenas um laboratório básico",
+          "correta": false,
+          "feedback": "Laboratório básico pode limitar o aprendizado."
+        },
+        {
+          "texto": "Não construir laboratório",
+          "correta": false,
+          "feedback": "Laboratórios são fundamentais para o ensino de ciências."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_009",
+      "texto": "Você precisa organizar uma feira de ciências para mostrar os projetos de reconstrução. Como você planejaria o evento?",
+      "tipo": "resolucao_problema",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Fazer um evento simples sem preparação",
+          "correta": false,
+          "feedback": "Falta de preparação pode comprometer o sucesso do evento."
+        },
+        {
+          "texto": "Planejar detalhadamente com participação da comunidade",
+          "correta": true,
+          "feedback": "Excelente! Planejamento detalhado e participação garantem sucesso."
+        },
+        {
+          "texto": "Cancelar a feira",
+          "correta": false,
+          "feedback": "Cancelar perde oportunidade de mostrar conquistas."
+        },
+        {
+          "texto": "Fazer apenas online",
+          "correta": false,
+          "feedback": "Apenas online pode reduzir o impacto e participação."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_010",
+      "texto": "A escola quer implementar um programa de sustentabilidade. Qual seria o primeiro passo?",
+      "tipo": "multipla_escolha",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Comprar equipamentos caros",
+          "correta": false,
+          "feedback": "Começar com gastos altos pode não ser sustentável."
+        },
+        {
+          "texto": "Educar a comunidade sobre sustentabilidade",
+          "correta": true,
+          "feedback": "Correto! Educação é a base para mudanças sustentáveis."
+        },
+        {
+          "texto": "Ignorar questões ambientais",
+          "correta": false,
+          "feedback": "Ignorar sustentabilidade é irresponsável nos dias atuais."
+        },
+        {
+          "texto": "Focar apenas em economia de energia",
+          "correta": false,
+          "feedback": "Sustentabilidade é mais ampla que apenas energia."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_011",
+      "texto": "Você encontrou pessoas desaparecidas durante a destruição da cidade. Como você organizaria o processo de reunificação?",
+      "tipo": "multipla_escolha",
+      "localidade": "escola",
+      "alternativas": [
+        {
+          "texto": "Criar um centro de informações e registro",
+          "correta": true,
+          "feedback": "Excelente! Um centro organizado facilita a reunificação."
+        },
+        {
+          "texto": "Deixar que se encontrem naturalmente",
+          "correta": false,
+          "feedback": "Abordagem passiva pode prolongar separações desnecessariamente."
+        },
+        {
+          "texto": "Usar apenas redes sociais",
+          "correta": false,
+          "feedback": "Nem todos têm acesso a redes sociais."
+        },
+        {
+          "texto": "Não se envolver no processo",
+          "correta": false,
+          "feedback": "Não ajudar em situações humanitárias é irresponsável."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_012",
+      "texto": "O hospital precisa de um novo sistema de triagem para emergências. Qual seria sua abordagem?",
+      "tipo": "resolucao_problema",
+      "localidade": "hospital",
+      "alternativas": [
+        {
+          "texto": "Usar o sistema antigo sem modificações",
+          "correta": false,
+          "feedback": "Sistemas antigos podem não atender novas necessidades."
+        },
+        {
+          "texto": "Implementar um sistema digital de triagem inteligente",
+          "correta": true,
+          "feedback": "Correto! Sistemas digitais aumentam eficiência e precisão."
+        },
+        {
+          "texto": "Não ter sistema de triagem",
+          "correta": false,
+          "feedback": "Sem triagem, casos urgentes podem não ser priorizados."
+        },
+        {
+          "texto": "Usar apenas critérios básicos",
+          "correta": false,
+          "feedback": "Critérios básicos podem não capturar a complexidade dos casos."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_013",
+      "texto": "Um vírus foi identificado na cidade. Qual seria sua estratégia de contenção?",
+      "tipo": "multipla_escolha",
+      "localidade": "hospital",
+      "alternativas": [
+        {
+          "texto": "Ignorar o problema",
+          "correta": false,
+          "feedback": "Ignorar vírus pode causar epidemias."
+        },
+        {
+          "texto": "Criar um plano de contenção com especialistas",
+          "correta": true,
+          "feedback": "Perfeito! Planos com especialistas são mais eficazes."
+        },
+        {
+          "texto": "Entrar em pânico",
+          "correta": false,
+          "feedback": "Pânico prejudica tomadas de decisão racionais."
+        },
+        {
+          "texto": "Usar apenas remédios caseiros",
+          "correta": false,
+          "feedback": "Vírus requerem abordagem científica profissional."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_014",
+      "texto": "O aparelho de ressonância magnética está com problemas. Você precisa encontrar uma solução rápida.",
+      "tipo": "busca_item",
+      "localidade": "hospital",
+      "alternativas": [
+        {
+          "texto": "Manual técnico do equipamento",
+          "correta": true,
+          "feedback": "Correto! O manual contém instruções específicas para resolução de problemas."
+        },
+        {
+          "texto": "Tentar consertar sem instruções",
+          "correta": false,
+          "feedback": "Equipamentos médicos requerem conhecimento técnico específico."
+        },
+        {
+          "texto": "Desligar e ignorar",
+          "correta": false,
+          "feedback": "Ignorar equipamentos essenciais prejudica o atendimento."
+        },
+        {
+          "texto": "Chamar qualquer técnico",
+          "correta": false,
+          "feedback": "Equipamentos médicos precisam de técnicos especializados."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_015",
+      "texto": "Você descobriu que equipamentos do hospital podem desenvolver um novo tratamento. Como você procederia?",
+      "tipo": "multipla_escolha",
+      "localidade": "hospital",
+      "alternativas": [
+        {
+          "texto": "Desenvolver o tratamento seguindo protocolos científicos",
+          "correta": true,
+          "feedback": "Excelente! Protocolos científicos garantem segurança e eficácia."
+        },
+        {
+          "texto": "Testar imediatamente em pacientes",
+          "correta": false,
+          "feedback": "Testes sem validação podem ser perigosos."
+        },
+        {
+          "texto": "Guardar a descoberta em segredo",
+          "correta": false,
+          "feedback": "Esconder descobertas médicas prejudica o bem comum."
+        },
+        {
+          "texto": "Vender a ideia para empresas",
+          "correta": false,
+          "feedback": "Priorizar lucro sobre saúde pública é antiético."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_016",
+      "texto": "O hospital precisa melhorar a segurança dos pacientes. Qual seria sua prioridade?",
+      "tipo": "resolucao_problema",
+      "localidade": "hospital",
+      "alternativas": [
+        {
+          "texto": "Instalar apenas câmeras de segurança",
+          "correta": false,
+          "feedback": "Câmeras são importantes, mas segurança médica é mais ampla."
+        },
+        {
+          "texto": "Implementar protocolos de segurança médica abrangentes",
+          "correta": true,
+          "feedback": "Correto! Protocolos abrangentes cobrem todos os aspectos da segurança."
+        },
+        {
+          "texto": "Contratar apenas mais seguranças",
+          "correta": false,
+          "feedback": "Segurança física é só um aspecto da segurança hospitalar."
+        },
+        {
+          "texto": "Não fazer mudanças",
+          "correta": false,
+          "feedback": "Não melhorar segurança pode colocar vidas em risco."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_017",
+      "texto": "Durante uma emergência médica, você precisa tomar decisões rápidas. Qual abordagem seria melhor?",
+      "tipo": "resolucao_problema",
+      "localidade": "hospital",
+      "alternativas": [
+        {
+          "texto": "Seguir protocolos estabelecidos",
+          "correta": true,
+          "feedback": "Correto! Protocolos são baseados em evidências e experiência."
+        },
+        {
+          "texto": "Improvisar completamente",
+          "correta": false,
+          "feedback": "Improvisação total pode ser perigosa em emergências médicas."
+        },
+        {
+          "texto": "Esperar instruções de outros",
+          "correta": false,
+          "feedback": "Em emergências, demora pode custar vidas."
+        },
+        {
+          "texto": "Entrar em pânico",
+          "correta": false,
+          "feedback": "Pânico prejudica a capacidade de tomar decisões corretas."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_018",
+      "texto": "Sua casa foi danificada e você precisa priorizar os reparos. Qual seria a ordem mais lógica?",
+      "tipo": "resolucao_problema",
+      "localidade": "casa",
+      "alternativas": [
+        {
+          "texto": "Começar pela decoração",
+          "correta": false,
+          "feedback": "Decoração não é prioridade quando há problemas estruturais."
+        },
+        {
+          "texto": "Priorizar estrutura, depois sistemas básicos, por fim acabamentos",
+          "correta": true,
+          "feedback": "Perfeito! Esta ordem garante segurança e funcionalidade progressiva."
+        },
+        {
+          "texto": "Fazer tudo ao mesmo tempo",
+          "correta": false,
+          "feedback": "Fazer tudo junto pode ser caótico e ineficiente."
+        },
+        {
+          "texto": "Não fazer reparos",
+          "correta": false,
+          "feedback": "Não reparar pode tornar a casa inabitável."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_019",
+      "texto": "Você quer tornar sua casa mais sustentável durante a reconstrução. Qual seria a melhor estratégia?",
+      "tipo": "multipla_escolha",
+      "localidade": "casa",
+      "alternativas": [
+        {
+          "texto": "Instalar apenas painéis solares",
+          "correta": false,
+          "feedback": "Painéis solares são ótimos, mas sustentabilidade é mais ampla."
+        },
+        {
+          "texto": "Implementar múltiplas soluções sustentáveis integradas",
+          "correta": true,
+          "feedback": "Excelente! Abordagem integrada maximiza benefícios ambientais."
+        },
+        {
+          "texto": "Não se preocupar com sustentabilidade",
+          "correta": false,
+          "feedback": "Ignorar sustentabilidade é irresponsável ambientalmente."
+        },
+        {
+          "texto": "Usar apenas materiais caros",
+          "correta": false,
+          "feedback": "Sustentabilidade não depende apenas de materiais caros."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_020",
+      "texto": "A universidade quer desenvolver uma patente para tecnologia de reconstrução. Qual seria o processo correto?",
+      "tipo": "multipla_escolha",
+      "localidade": "universidade",
+      "alternativas": [
+        {
+          "texto": "Registrar a ideia imediatamente sem pesquisa",
+          "correta": false,
+          "feedback": "Patentes requerem pesquisa prévia e desenvolvimento adequado."
+        },
+        {
+          "texto": "Pesquisar, desenvolver, testar e então registrar a patente",
+          "correta": true,
+          "feedback": "Correto! Este é o processo adequado para desenvolvimento de patentes."
+        },
+        {
+          "texto": "Copiar tecnologias existentes",
+          "correta": false,
+          "feedback": "Copiar não gera inovação nem patentes válidas."
+        },
+        {
+          "texto": "Não desenvolver nenhuma tecnologia",
+          "correta": false,
+          "feedback": "Universidades têm papel importante na inovação tecnológica."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_021",
+      "texto": "A universidade quer criar um centro de pesquisa para reconstrução urbana. Como você estruturaria o projeto?",
+      "tipo": "resolucao_problema",
+      "localidade": "universidade",
+      "alternativas": [
+        {
+          "texto": "Trabalhar isoladamente",
+          "correta": false,
+          "feedback": "Isolamento limita recursos e perspectivas."
+        },
+        {
+          "texto": "Criar parcerias multidisciplinares com comunidade e governo",
+          "correta": true,
+          "feedback": "Excelente! Parcerias multidisciplinares enriquecem a pesquisa."
+        },
+        {
+          "texto": "Focar apenas em teoria",
+          "correta": false,
+          "feedback": "Pesquisa sem aplicação prática tem impacto limitado."
+        },
+        {
+          "texto": "Não criar o centro",
+          "correta": false,
+          "feedback": "Centros de pesquisa são importantes para desenvolvimento científico."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_022",
+      "texto": "A delegacia precisa de um novo sistema de segurança para a cidade reconstruída. Qual seria sua abordagem?",
+      "tipo": "resolucao_problema",
+      "localidade": "policia",
+      "alternativas": [
+        {
+          "texto": "Usar apenas métodos tradicionais",
+          "correta": false,
+          "feedback": "Métodos apenas tradicionais podem não atender necessidades modernas."
+        },
+        {
+          "texto": "Implementar sistema integrado com tecnologia e participação comunitária",
+          "correta": true,
+          "feedback": "Perfeito! Integração de tecnologia e comunidade é mais eficaz."
+        },
+        {
+          "texto": "Confiar apenas em tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia sem elemento humano pode ser limitada."
+        },
+        {
+          "texto": "Não implementar sistema de segurança",
+          "correta": false,
+          "feedback": "Segurança é essencial para uma comunidade funcional."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_023",
+      "texto": "Você precisa melhorar a relação entre polícia e comunidade durante a reconstrução. Qual estratégia seria mais eficaz?",
+      "tipo": "multipla_escolha",
+      "localidade": "policia",
+      "alternativas": [
+        {
+          "texto": "Aumentar apenas o policiamento ostensivo",
+          "correta": false,
+          "feedback": "Policiamento ostensivo pode criar tensão sem resolver problemas de fundo."
+        },
+        {
+          "texto": "Criar programas de policiamento comunitário e diálogo",
+          "correta": true,
+          "feedback": "Excelente! Policiamento comunitário constrói confiança e cooperação."
+        },
+        {
+          "texto": "Evitar contato com a comunidade",
+          "correta": false,
+          "feedback": "Evitar contato cria distanciamento e desconfiança."
+        },
+        {
+          "texto": "Usar apenas força quando necessário",
+          "correta": false,
+          "feedback": "Focar apenas em força não constrói relacionamentos positivos."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_024",
+      "texto": "Durante a reconstrução, você identifica oportunidades e ameaças para a segurança pública. Como você procederia?",
+      "tipo": "multipla_escolha",
+      "localidade": "policia",
+      "alternativas": [
+        {
+          "texto": "Ignorar as análises",
+          "correta": false,
+          "feedback": "Ignorar análises de segurança pode levar a problemas futuros."
+        },
+        {
+          "texto": "Criar plano estratégico baseado na análise de riscos",
+          "correta": true,
+          "feedback": "Correto! Planejamento estratégico baseado em análise é fundamental."
+        },
+        {
+          "texto": "Reagir apenas quando problemas acontecerem",
+          "correta": false,
+          "feedback": "Abordagem reativa é menos eficaz que prevenção."
+        },
+        {
+          "texto": "Focar apenas nas ameaças",
+          "correta": false,
+          "feedback": "Focar só em ameaças perde oportunidades de melhoria."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_025",
+      "texto": "A área rural precisa de um novo sistema de irrigação sustentável. Qual tecnologia seria mais adequada?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Irrigação por gotejamento com sensores inteligentes",
+          "correta": true,
+          "feedback": "Excelente! Gotejamento com sensores otimiza uso da água."
+        },
+        {
+          "texto": "Irrigação por inundação",
+          "correta": false,
+          "feedback": "Inundação desperdiça muita água."
+        },
+        {
+          "texto": "Não usar irrigação",
+          "correta": false,
+          "feedback": "Sem irrigação, a produtividade pode ser muito baixa."
+        },
+        {
+          "texto": "Usar apenas água da chuva",
+          "correta": false,
+          "feedback": "Apenas chuva pode ser insuficiente em períodos secos."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_026",
+      "texto": "Você precisa escolher culturas adequadas para a reconstrução agrícola. Qual critério seria mais importante?",
+      "tipo": "multipla_escolha",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Apenas o lucro imediato",
+          "correta": false,
+          "feedback": "Focar só no lucro pode prejudicar sustentabilidade."
+        },
+        {
+          "texto": "Adaptação ao clima local e sustentabilidade",
+          "correta": true,
+          "feedback": "Correto! Adaptação climática e sustentabilidade garantem sucesso a longo prazo."
+        },
+        {
+          "texto": "Seguir apenas tradições antigas",
+          "correta": false,
+          "feedback": "Tradições podem não ser adequadas para novos contextos."
+        },
+        {
+          "texto": "Copiar outras regiões",
+          "correta": false,
+          "feedback": "Cada região tem características específicas."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_027",
+      "texto": "Pergunta rural 3: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_028",
+      "texto": "Pergunta rural 4: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_029",
+      "texto": "Pergunta rural 5: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_030",
+      "texto": "Pergunta rural 6: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_031",
+      "texto": "Pergunta rural 7: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_032",
+      "texto": "Pergunta rural 8: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_033",
+      "texto": "Pergunta rural 9: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_034",
+      "texto": "Pergunta rural 10: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_035",
+      "texto": "Pergunta rural 11: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_036",
+      "texto": "Pergunta rural 12: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_037",
+      "texto": "Pergunta rural 13: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_038",
+      "texto": "Pergunta rural 14: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_039",
+      "texto": "Pergunta rural 15: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_040",
+      "texto": "Pergunta rural 16: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_041",
+      "texto": "Pergunta rural 17: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_042",
+      "texto": "Pergunta rural 18: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_043",
+      "texto": "Pergunta rural 19: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_044",
+      "texto": "Pergunta rural 20: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_045",
+      "texto": "Pergunta rural 21: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_046",
+      "texto": "Pergunta rural 22: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_047",
+      "texto": "Pergunta rural 23: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_048",
+      "texto": "Pergunta rural 24: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_049",
+      "texto": "Pergunta rural 25: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    },
+    {
+      "id": "pergunta_050",
+      "texto": "Pergunta rural 26: Como você implementaria tecnologia sustentável na agricultura?",
+      "tipo": "resolucao_problema",
+      "localidade": "area_rural",
+      "alternativas": [
+        {
+          "texto": "Usar tecnologia moderna sustentável",
+          "correta": true,
+          "feedback": "Tecnologia sustentável é o futuro da agricultura."
+        },
+        {
+          "texto": "Manter métodos antigos",
+          "correta": false,
+          "feedback": "Métodos antigos podem ser menos eficientes."
+        },
+        {
+          "texto": "Não usar tecnologia",
+          "correta": false,
+          "feedback": "Tecnologia pode aumentar produtividade."
+        },
+        {
+          "texto": "Usar apenas químicos",
+          "correta": false,
+          "feedback": "Excesso de químicos prejudica o meio ambiente."
+        }
+      ]
+    }
+  ],
+  "vinculacoes": [
+    {
+      "id": "vinc_001",
+      "pergunta_id": "pergunta_001",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_002",
+      "pergunta_id": "pergunta_002",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_003",
+      "pergunta_id": "pergunta_003",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_004",
+      "pergunta_id": "pergunta_004",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_005",
+      "pergunta_id": "pergunta_005",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_006",
+      "pergunta_id": "pergunta_006",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_007",
+      "pergunta_id": "pergunta_007",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_008",
+      "pergunta_id": "pergunta_008",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_009",
+      "pergunta_id": "pergunta_009",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_010",
+      "pergunta_id": "pergunta_010",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_011",
+      "pergunta_id": "pergunta_011",
+      "localidade_id": "hospital",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_012",
+      "pergunta_id": "pergunta_012",
+      "localidade_id": "universidade",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_013",
+      "pergunta_id": "pergunta_013",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_014",
+      "pergunta_id": "pergunta_014",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_015",
+      "pergunta_id": "pergunta_015",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_016",
+      "pergunta_id": "pergunta_016",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_017",
+      "pergunta_id": "pergunta_017",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_018",
+      "pergunta_id": "pergunta_018",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_019",
+      "pergunta_id": "pergunta_019",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_020",
+      "pergunta_id": "pergunta_020",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_021",
+      "pergunta_id": "pergunta_021",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_022",
+      "pergunta_id": "pergunta_022",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_023",
+      "pergunta_id": "pergunta_023",
+      "localidade_id": "universidade",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_024",
+      "pergunta_id": "pergunta_024",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_025",
+      "pergunta_id": "pergunta_025",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_026",
+      "pergunta_id": "pergunta_026",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_027",
+      "pergunta_id": "pergunta_027",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_028",
+      "pergunta_id": "pergunta_028",
+      "localidade_id": "casa",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_029",
+      "pergunta_id": "pergunta_029",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_030",
+      "pergunta_id": "pergunta_030",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_031",
+      "pergunta_id": "pergunta_031",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_032",
+      "pergunta_id": "pergunta_032",
+      "localidade_id": "policia",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_033",
+      "pergunta_id": "pergunta_033",
+      "localidade_id": "policia",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_034",
+      "pergunta_id": "pergunta_034",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_035",
+      "pergunta_id": "pergunta_035",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_036",
+      "pergunta_id": "pergunta_036",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_037",
+      "pergunta_id": "pergunta_037",
+      "localidade_id": "hospital",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_038",
+      "pergunta_id": "pergunta_038",
+      "localidade_id": "policia",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_039",
+      "pergunta_id": "pergunta_039",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_040",
+      "pergunta_id": "pergunta_040",
+      "localidade_id": "hospital",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_041",
+      "pergunta_id": "pergunta_041",
+      "localidade_id": "hospital",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_042",
+      "pergunta_id": "pergunta_042",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_043",
+      "pergunta_id": "pergunta_043",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_044",
+      "pergunta_id": "pergunta_044",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_045",
+      "pergunta_id": "pergunta_045",
+      "localidade_id": "hospital",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_046",
+      "pergunta_id": "pergunta_046",
+      "localidade_id": "hospital",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_047",
+      "pergunta_id": "pergunta_047",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_048",
+      "pergunta_id": "pergunta_048",
+      "localidade_id": "area_rural",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_049",
+      "pergunta_id": "pergunta_049",
+      "localidade_id": "escola",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    },
+    {
+      "id": "vinc_050",
+      "pergunta_id": "pergunta_050",
+      "localidade_id": "casa",
+      "tipo": "localizada_em",
+      "obrigatoria": true
+    }
+  ],
+  "xp_sistema": {
+    "base_xp": {
+      "resolucao_problema": 25,
+      "multipla_escolha": 20,
+      "busca_item": 15,
+      "feedback": 10
+    },
+    "multiplicadores": {
+      "tempo_restante": {
+        "25-30s": 1.5,
+        "20-24s": 1.3,
+        "15-19s": 1.1,
+        "10-14s": 1.0,
+        "5-9s": 0.8,
+        "0-4s": 0.5
+      },
+      "sequencia_acertos": {
+        "1": 1.0,
+        "2": 1.1,
+        "3": 1.2,
+        "4": 1.3,
+        "5": 1.5,
+        "6+": 2.0
+      },
+      "dificuldade_localidade": {
+        "casa": 1.0,
+        "escola": 1.1,
+        "hospital": 1.2,
+        "policia": 1.3,
+        "universidade": 1.4,
+        "area_rural": 1.5
+      }
+    }
+  },
+  "evolution_system": {
+    "stages": [
+      {
+        "id": 1,
+        "name": "Robô Básico",
+        "description": "Um robô simples com inteligência artificial básica",
+        "xp_required": 0,
+        "image": "evolution_stage_1.png",
+        "characteristics": [
+          "Processamento lógico básico",
+          "Respostas programadas",
+          "Aprendizado limitado"
+        ],
+        "abilities": [
+          "Análise de dados simples",
+          "Execução de tarefas básicas"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Robô Avançado",
+        "description": "Robô com capacidades melhoradas e início de características orgânicas",
+        "xp_required": 500,
+        "image": "evolution_stage_2.png",
+        "characteristics": [
+          "Processamento mais complexo",
+          "Início de intuição artificial",
+          "Primeiros traços de personalidade"
+        ],
+        "abilities": [
+          "Resolução de problemas intermediários",
+          "Reconhecimento de padrões",
+          "Comunicação melhorada"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Híbrido",
+        "description": "Perfeito equilíbrio entre tecnologia e humanidade",
+        "xp_required": 1500,
+        "image": "evolution_stage_3.png",
+        "characteristics": [
+          "Combinação de lógica e emoção",
+          "Empatia artificial desenvolvida",
+          "Criatividade emergente"
+        ],
+        "abilities": [
+          "Resolução criativa de problemas",
+          "Liderança adaptativa",
+          "Colaboração efetiva"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Quase Humano",
+        "description": "Predominantemente humano com melhorias tecnológicas",
+        "xp_required": 3000,
+        "image": "evolution_stage_4.png",
+        "characteristics": [
+          "Emoções complexas",
+          "Intuição desenvolvida",
+          "Pensamento abstrato"
+        ],
+        "abilities": [
+          "Liderança inspiradora",
+          "Inovação constante",
+          "Empatia profunda"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Humano Evoluído",
+        "description": "Humano completo com capacidades extraordinárias",
+        "xp_required": 5000,
+        "image": "evolution_stage_5.png",
+        "characteristics": [
+          "Humanidade plena",
+          "Sabedoria integrada",
+          "Visão holística"
+        ],
+        "abilities": [
+          "Liderança transformacional",
+          "Inovação disruptiva",
+          "Impacto social positivo"
+        ]
+      }
+    ],
+    "evolution_bonuses": {
+      "stage_2": {
+        "xp_multiplier": 1.1,
+        "skill_development_bonus": 0.1,
+        "description": "10% mais XP e desenvolvimento de habilidades"
+      },
+      "stage_3": {
+        "xp_multiplier": 1.2,
+        "skill_development_bonus": 0.2,
+        "superpower_unlock_bonus": 0.1,
+        "description": "20% mais XP, desenvolvimento acelerado e chance de superpoderes"
+      },
+      "stage_4": {
+        "xp_multiplier": 1.3,
+        "skill_development_bonus": 0.3,
+        "superpower_unlock_bonus": 0.2,
+        "leadership_bonus": 0.15,
+        "description": "30% mais XP, liderança aprimorada e superpoderes frequentes"
+      },
+      "stage_5": {
+        "xp_multiplier": 1.5,
+        "skill_development_bonus": 0.5,
+        "superpower_unlock_bonus": 0.3,
+        "leadership_bonus": 0.25,
+        "innovation_bonus": 0.2,
+        "description": "50% mais XP, máximo potencial humano desbloqueado"
+      }
+    },
+    "evolution_rewards": [
+      {
+        "stage": 2,
+        "rewards": [
+          "Desbloqueio de perguntas especiais",
+          "Acesso a habilidades intermediárias",
+          "Bônus de XP permanente"
+        ]
+      },
+      {
+        "stage": 3,
+        "rewards": [
+          "Superpoder da Adaptação desbloqueado",
+          "Acesso a projetos colaborativos",
+          "Multiplicador de habilidades sociais"
+        ]
+      },
+      {
+        "stage": 4,
+        "rewards": [
+          "Superpoder da Liderança desbloqueado",
+          "Acesso a desafios de gestão",
+          "Bônus em todas as categorias"
+        ]
+      },
+      {
+        "stage": 5,
+        "rewards": [
+          "Todos os superpoderes desbloqueados",
+          "Acesso a modo criador",
+          "Status de mentor para outros jogadores"
+        ]
+      }
+    ]
+  }
+}

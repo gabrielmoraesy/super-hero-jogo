@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Misc
+*.log
+*.tgz
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Coverage
+coverage/
+
+# Test output
+junit.xml
+
+# Optional: ignore local config
+local.env
