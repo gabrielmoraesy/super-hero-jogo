@@ -15,6 +15,7 @@ import {
   User,
   X
 } from 'lucide-react';
+import cityMapImg from './assets/city.png';
 
 // Mapeamento de ícones para localidades
 const locationIcons = {
@@ -242,7 +243,7 @@ const CityMap = ({
           style={{ background: '#181818', border: '1px solid #242424' }}
         >
           {/* Imagem do mapa da cidade */}
-          <img src="/src/assets/city.png" alt="Mapa da Cidade" className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" style={{ zIndex: 1 }} draggable={false} />
+          <img src={cityMapImg} alt="Mapa da Cidade" className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" style={{ zIndex: 1 }} draggable={false} />
 
           {/* Pontos das localidades */}
           {locations.map((location) => {

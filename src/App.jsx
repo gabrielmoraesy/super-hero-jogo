@@ -76,7 +76,6 @@ import CityMap from './components/CityMap';
 // Importar imagens de evolução
 import stage1 from './assets/evolution_stage_1.png';
 import roboDialogo from './assets/evolution_stage_1_remove_background.png';
-import cityMapImg from './assets/city.png';
 import backgroundAppImg from './assets/background-app.png';
 import stage2 from './assets/evolution_stage_2.png';
 import stage3 from './assets/evolution_stage_3.png';
@@ -189,7 +188,7 @@ const RoboDialogScreens = ({ onFinish }) => {
       style={{ background: '#0D0D0D' }}
     >
       <img 
-        src="/src/assets/background-app.png" 
+        src={backgroundAppImg}
         alt="Fundo App" 
         className="absolute inset-0 w-full h-full object-cover z-0 select-none pointer-events-none" 
         style={{ filter: 'blur(1px)' }}
@@ -1218,7 +1217,7 @@ function App() {
               style={{ background: '#0D0D0D' }}
             >
               <img 
-                src="/src/assets/background-app.png" 
+                src={backgroundAppImg}
                 alt="Fundo App" 
                 className="absolute inset-0 w-full h-full object-cover z-0 select-none pointer-events-none" 
                 style={{ filter: 'blur(1px)' }}
