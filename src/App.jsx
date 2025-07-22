@@ -1240,10 +1240,6 @@ function App() {
                     <li><b>Fase 2: A Evolução Liderança</b> – Liderança, gestão de equipes, comunicação, networking e pensamento estratégico.</li>
                     <li><b>Fase 3: O Empreendedor Completo</b> – Visão empreendedora, inovação, criatividade e impacto social positivo.</li>
                   </ul>
-                  <p className="text-base md:text-lg opacity-90 text-center mb-4 max-w-xl mx-auto">
-                    Responda corretamente para ganhar XP, desbloquear superpoderes e evoluir Flyp até o topo!<br/>
-                    Pronto para começar essa missão?
-                  </p>
                   <button
                     onClick={handleStart}
                     className="px-7 py-3 rounded-full font-bold text-base shadow-2xl flex items-center gap-2 transition-colors justify-center mt-2"

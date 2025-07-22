@@ -132,7 +132,16 @@ const CityMap = ({
               </div>
             )}
             {/* Seta do tooltip */}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-black"></div>
+            <div
+              className="absolute top-full left-1/2 transform -translate-x-1/2"
+              style={{
+                width: 0,
+                height: 0,
+                borderLeft: '8px solid transparent',
+                borderRight: '8px solid transparent',
+                borderTop: '8px solid #000',
+              }}
+            />
           </div>
         )}
       </div>
@@ -144,8 +153,8 @@ const CityMap = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen overflow-hidden"
-      style={{ background: '#0D0D0D' }}
+      className="overflow-hidden"
+      style={{ background: '#0D0D0D', minHeight: '100dvh', height: '100dvh' }}
     >
       <div className="h-full max-w-[475px] mx-auto flex flex-col p-4 relative" style={{ color: '#FFFFFF' }}>
         {/* Header */}
