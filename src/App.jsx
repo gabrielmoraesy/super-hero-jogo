@@ -1,33 +1,34 @@
-import { AnimatePresence } from 'framer-motion';
-import {
-  ArrowLeft,
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Play, 
+  MapPin, 
+  Trophy, 
+  Star, 
   ArrowRight,
-  Award,
-  Building2,
-  CheckCircle,
-  Clock,
-  Crown,
-  GraduationCap,
-  Heart,
+  ArrowLeft,
   Home,
-  Lightbulb,
-  MapPin,
-  Play,
+  Building2,
+  GraduationCap,
   Shield,
-  Sparkles,
-  Star,
   Stethoscope,
-  Target,
   Tractor,
-  TrendingUp,
-  Trophy,
-  User,
+  CheckCircle,
   XCircle,
-  Zap
+  Clock,
+  Zap,
+  Award,
+  Crown,
+  Lightbulb,
+  Heart,
+  User,
+  TrendingUp,
+  Target,
+  Sparkles
 } from 'lucide-react';
-import { useEffect, useState } from 'react';
 import './App.css';
 import gameData from './assets/jogo_sebrae_corrigido.json';
+import EvolutionDisplay from './components/EvolutionDisplay';
 import CityMap from './components/CityMap';
 
 // Importar imagens de evolução
@@ -468,7 +469,7 @@ const LocationSelector = ({ onLocationSelect, completedLocations = [], userProgr
           </div>
         </motion.div>
 
-        <div className="flex-1 overflow-y-auto space-y-3 min-h-0 py-2 pr-3">{/* Adicionado scroll e padding à direita */}
+        <div className="flex-1 overflow-y-auto space-y-3 min-h-0 py-2 pr-3">{/* Adicionado scroll e padding lateral */}
           {gameData.localidades.map((location) => {
             const Icon = locationIcons[location.id] || MapPin;
             const questionsCount = gameData.perguntas.filter(q => q.localidade === location.id).length;
