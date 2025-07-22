@@ -1262,32 +1262,36 @@ function App() {
           <RoboDialogScreens key="robo-dialog" onFinish={() => { setShowRoboDialog(false); setCurrentScreen('cityMap'); }} />
         )}
         {currentScreen === 'cityMap' && !showRoboDialog && (
-          <CityMap 
-            key="cityMap"
-            locations={gameData.localidades}
-            onLocationSelect={handleLocationSelect}
-            completedLocations={completedLocations}
-            userProgress={userProgress}
-            userStats={userStats}
-            onShowProfile={() => setShowProfile(true)}
-            onShowLocationList={handleShowLocationList}
-            evolutionImages={evolutionImages}
-            currentStage={getCurrentStage(userStats.totalXP)}
-            stageInfo={gameData.evolution_system.stages[getCurrentStage(userStats.totalXP) - 1]}
-            evolutionProgress={getEvolutionProgress(userStats.totalXP)}
-            gameData={gameData}
-          />
+          <div className="overflow-y-auto" style={{ minHeight: '100dvh', height: '100dvh' }}>
+            <CityMap 
+              key="cityMap"
+              locations={gameData.localidades}
+              onLocationSelect={handleLocationSelect}
+              completedLocations={completedLocations}
+              userProgress={userProgress}
+              userStats={userStats}
+              onShowProfile={() => setShowProfile(true)}
+              onShowLocationList={handleShowLocationList}
+              evolutionImages={evolutionImages}
+              currentStage={getCurrentStage(userStats.totalXP)}
+              stageInfo={gameData.evolution_system.stages[getCurrentStage(userStats.totalXP) - 1]}
+              evolutionProgress={getEvolutionProgress(userStats.totalXP)}
+              gameData={gameData}
+            />
+          </div>
         )}
         {currentScreen === 'locationSelect' && !showRoboDialog && (
-          <LocationSelector 
-            key="locationSelect" 
-            onLocationSelect={handleLocationSelect}
-            completedLocations={completedLocations}
-            userProgress={userProgress}
-            userStats={userStats}
-            onShowProfile={() => setShowProfile(true)}
-            onShowCityMap={handleShowCityMap}
-          />
+          <div className="overflow-y-auto" style={{ minHeight: '100dvh', height: '100dvh' }}>
+            <LocationSelector 
+              key="locationSelect" 
+              onLocationSelect={handleLocationSelect}
+              completedLocations={completedLocations}
+              userProgress={userProgress}
+              userStats={userStats}
+              onShowProfile={() => setShowProfile(true)}
+              onShowCityMap={handleShowCityMap}
+            />
+          </div>
         )}
         {currentScreen === 'quiz' && currentQuestion && !showRoboDialog && (
           <QuizQuestion
