@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { User, Zap, TrendingUp, Star, Award } from 'lucide-react';
+import { Zap, TrendingUp, Star, Award } from 'lucide-react';
 
 // Importar imagens de evolução
 import stage1 from '../assets/evolution_stage_1.png';
@@ -208,7 +207,7 @@ const EvolutionDisplay = ({ userStats, evolutionSystem, compact = false }) => {
       <div className="mt-6">
         <h5 className="text-sm font-semibold text-gray-700 mb-3">Timeline de Evolução</h5>
         <div className="space-y-2">
-          {evolutionSystem.stages.map((stage, index) => {
+          {evolutionSystem.stages.map((stage) => {
             const isCompleted = currentStage > stage.id;
             const isCurrent = currentStage === stage.id;
             

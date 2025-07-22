@@ -1,34 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Play, 
-  MapPin, 
-  Trophy, 
-  Star, 
-  ArrowRight,
+import { AnimatePresence } from 'framer-motion';
+import {
   ArrowLeft,
-  Home,
-  Building2,
-  GraduationCap,
-  Shield,
-  Stethoscope,
-  Tractor,
-  CheckCircle,
-  XCircle,
-  Clock,
-  Zap,
+  ArrowRight,
   Award,
+  Building2,
+  CheckCircle,
+  Clock,
   Crown,
-  Lightbulb,
+  GraduationCap,
   Heart,
-  User,
-  TrendingUp,
+  Home,
+  Lightbulb,
+  MapPin,
+  Play,
+  Shield,
+  Sparkles,
+  Star,
+  Stethoscope,
   Target,
-  Sparkles
+  Tractor,
+  TrendingUp,
+  Trophy,
+  User,
+  XCircle,
+  Zap
 } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import gameData from './assets/jogo_sebrae_corrigido.json';
-import EvolutionDisplay from './components/EvolutionDisplay';
 import CityMap from './components/CityMap';
 
 // Importar imagens de evolução

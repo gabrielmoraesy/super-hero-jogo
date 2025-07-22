@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { 
   MapPin, 
   Home,
@@ -30,7 +30,6 @@ const CityMap = ({
   onLocationSelect, 
   completedLocations = [], 
   userProgress = {},
-  userStats,
   onShowProfile,
   onShowLocationList
 }) => {
