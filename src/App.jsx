@@ -76,6 +76,8 @@ import CityMap from './components/CityMap';
 // Importar imagens de evolução
 import stage1 from './assets/evolution_stage_1.png';
 import roboDialogo from './assets/evolution_stage_1_remove_background.png';
+import cityMapImg from './assets/city.png';
+import backgroundAppImg from './assets/background-app.png';
 import stage2 from './assets/evolution_stage_2.png';
 import stage3 from './assets/evolution_stage_3.png';
 import stage4 from './assets/evolution_stage_4.png';
@@ -557,7 +559,7 @@ const LocationSelector = ({ onLocationSelect, completedLocations = [], userProgr
                     className="w-12 h-12 rounded-full flex items-center justify-center relative"
                     style={{ background: location.cor_tema || '#181818', border: '2px solid #242424' }}
                   >
-                    <Icon className="w-6 h-6" style={{ color: '#0A84FF' }} />
+                    <Icon className="w-6 h-6" style={{ color: '#FFFFFF' }} />
                     {isCompleted && (
                       <div className="absolute -top-0.5 -right-0.5 w-5 h-5 rounded-full flex items-center justify-center" style={{ background: '#0A84FF' }}>
                         <CheckCircle className="w-3 h-3" style={{ color: '#FFFFFF' }} />
