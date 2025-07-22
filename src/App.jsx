@@ -1230,8 +1230,6 @@ function App() {
                   <h1 className="text-3xl md:text-4xl font-bold mb-2 text-center tracking-tight">SUPER HERO</h1>
                   <h2 className="text-lg md:text-xl font-semibold mb-4 text-center">Bem-vindo à Jornada Épica de Flyp!</h2>
                   <p className="text-base md:text-lg opacity-90 text-center mb-4 max-w-xl mx-auto">
-                    Prepare-se para ajudar Flyp a reconstruir a cidade e se tornar um verdadeiro empreendedor!<br/>
-                    <br/>
                     <span className="font-semibold text-[#0A84FF]">Como funciona o jogo?</span><br/>
                     Você vai responder perguntas, ganhar XP e evoluir seu personagem. A cada fase, Flyp aprende e se desenvolve:
                   </p>
