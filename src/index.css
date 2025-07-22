@@ -1,0 +1,19 @@
+/* Cores e variáveis globais customizadas */
+:root {
+  --background: oklch(0.145 0 0);           /* #000000 - Preto */
+  --foreground: oklch(0.985 0 0);           /* #FFFFFF - Branco */
+  --card: oklch(0.205 0 0);                 /* #333333 - Cinza escuro */
+  --card-foreground: oklch(0.985 0 0);      /* #FFFFFF - Branco */
+  --primary: oklch(0.922 0 0);              /* #E5E5E5 - Cinza claro */
+  --primary-foreground: oklch(0.205 0 0);   /* #333333 - Cinza escuro */
+  --secondary: oklch(0.269 0 0);            /* #444444 - Cinza médio */
+  --secondary-foreground: oklch(0.985 0 0); /* #FFFFFF - Branco */
+  --muted: oklch(0.269 0 0);                /* #444444 - Cinza médio */
+  --muted-foreground: oklch(0.708 0 0);     /* #B5B5B5 - Cinza claro */
+  --accent: oklch(0.269 0 0);               /* #444444 - Cinza médio */
+  --accent-foreground: oklch(0.985 0 0);    /* #FFFFFF - Branco */
+  --destructive: oklch(0.704 0.191 22.216); /* #FF4444 - Vermelho */
+  --border: oklch(1 0 0 / 10%);             /* #FFFFFF com 10% opacidade */
+  --input: oklch(1 0 0 / 15%);              /* #FFFFFF com 15% opacidade */
+  --ring: oklch(0.556 0 0);                 /* #8E8E8E - Cinza médio */
+}

@@ -257,7 +257,7 @@ const CityMap = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-[400px] mx-4 bg-white rounded-xl p-4 shadow-xl border-2 border-blue-200 max-h-64 overflow-y-auto"
+              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[420px] mx-auto bg-white rounded-xl p-4 shadow-xl border-2 border-blue-200 max-h-64 overflow-y-auto"
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">

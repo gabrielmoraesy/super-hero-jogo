@@ -469,21 +469,16 @@ const LocationSelector = ({ onLocationSelect, completedLocations = [], userProgr
           </div>
         </motion.div>
 
-        <div className="flex-1 overflow-y-auto space-y-3 min-h-0 py-2">{/* Adicionado scroll */}
-          {gameData.localidades.map((location, index) => {
+        <div className="flex-1 overflow-y-auto space-y-3 min-h-0 py-2 pr-3">{/* Adicionado scroll e padding à direita */}
+          {gameData.localidades.map((location) => {
             const Icon = locationIcons[location.id] || MapPin;
             const questionsCount = gameData.perguntas.filter(q => q.localidade === location.id).length;
             const isCompleted = completedLocations.includes(location.id);
             const locationProgress = userProgress[location.id] || { score: 0, questionsAnswered: 0 };
             
             return (
-              <motion.button
+              <button
                 key={location.id}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
                 onClick={() => onLocationSelect(location)}
                 className="w-full bg-white rounded-xl p-5 shadow-lg border-2 border-transparent hover:border-blue-200 transition-all relative overflow-hidden"
               >
@@ -535,7 +530,7 @@ const LocationSelector = ({ onLocationSelect, completedLocations = [], userProgr
                     <Star className="w-4 h-4 text-yellow-500 fill-current" />
                   </div>
                 )}
-              </motion.button>
+              </button>
             );
           })}
         </div>
